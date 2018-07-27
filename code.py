@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 data2014 = pd.read_csv('worldcup_2014.csv')
 data2018 = pd.read_csv('worldcup_2018.csv')
 
+# use the same amount of money to buy each play 
 def equal_capital(data):
     data['earning1'] = -10000
     data.loc[(data['win'] < data['lose'])&(data['result']=='l'),'earning1'] += 10000*data['lose']
@@ -29,6 +30,7 @@ def equal_capital(data):
 
     return 0
 
+# buy each play for the same expectation
 def equal_expectation(data):
     data['earning1'] = -10000
     data.loc[(data['win'] < data['lose'])&(data['result']=='l'),'earning1'] += 10000*data['lose']
@@ -52,9 +54,9 @@ def equal_expectation(data):
     plt.legend(loc='best')
     plt.show()
 
-    
     return 0
 
+# buy the 'draw' and 'weak team will win' to make a 'strong team will not win'
 def strong_not_win(data):
 
     data['earning1'] = -20000
@@ -70,6 +72,7 @@ def strong_not_win(data):
 
     return 0
 
+# buy the play only when it could be a big upset
 def big_upset(data):
     data['earning1'] = 0
     data.loc[(data['win'] >6) | (data['lose'] >6),'earning1'] = -10000
@@ -83,6 +86,7 @@ def big_upset(data):
     plt.show()
     
     return 0
+
 
 equal_capital(data2018)
 
