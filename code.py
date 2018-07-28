@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 data2014 = pd.read_csv('worldcup_2014.csv')
 data2018 = pd.read_csv('worldcup_2018.csv')
 
-# use the same amount of money to buy each play 
+# use the same amount of money to buy each match 
 def equal_capital(data):
     data['earning1'] = -10000
     data.loc[(data['win'] < data['lose'])&(data['result']=='l'),'earning1'] += 10000*data['lose']
@@ -30,28 +30,30 @@ def equal_capital(data):
 
     return 0
 
-# buy each play for the same expectation
+# buy each match for the same expectation
 def equal_expectation(data):
-    data['earning1'] = -10000
-    data.loc[(data['win'] < data['lose'])&(data['result']=='l'),'earning1'] += 10000*data['lose']
-    data.loc[(data['win'] > data['lose'])&(data['result']=='w'),'earning1'] += 10000*data['win']
+    data.loc[data['win'] < data['lose'],'earning1'] = -50000/data['lose'] 
+    data.loc[data['win'] >= data['lose'],'earning1'] =  -50000/data['win']
+    data.loc[(data['win'] < data['lose'])&(data['result']=='l'),'earning1'] += 50000
+    data.loc[(data['win'] > data['lose'])&(data['result']=='w'),'earning1'] += 50000
 
-    data['earning2'] = -10000
-    data.loc[(data['win'] < data['lose'])&(data['result']=='w'),'earning2'] += 10000*data['win']
-    data.loc[(data['win'] > data['lose'])&(data['result']=='l'),'earning2'] += 10000*data['lose']
+    data.loc[data['win'] > data['lose'],'earning2'] = -20000/data['lose'] 
+    data.loc[data['win'] <= data['lose'],'earning2'] =  -20000/data['win']
+    data.loc[(data['win'] < data['lose'])&(data['result']=='w'),'earning2'] += 20000
+    data.loc[(data['win'] > data['lose'])&(data['result']=='l'),'earning2'] += 20000
 
-    data['earning3'] = -10000
-    data.loc[data['result']=='d','earning3'] += 10000*data['draw']
+    data['earning3'] = -30000/data['draw']
+    data.loc[data['result']=='d','earning3'] += 30000
     
     data['capital1'] = data['earning1'].cumsum()
     data['capital2'] = data['earning2'].cumsum()
     data['capital3'] = data['earning3'].cumsum()
 
-    plt.subplots(figsize = (7,3)) 
+    plt.subplots(figsize = (9,4)) 
     data['capital1'].plot(label='1:weak')
     data['capital2'].plot(label='2:strong')
     data['capital3'].plot(label='3:draw')
-    plt.legend(loc='best')
+    plt.legend()
     plt.show()
 
     return 0
@@ -72,7 +74,7 @@ def strong_not_win(data):
 
     return 0
 
-# buy the play only when it could be a big upset
+# buy the match only when it could be a big upset
 def big_upset(data):
     data['earning1'] = 0
     data.loc[(data['win'] >6) | (data['lose'] >6),'earning1'] = -10000
@@ -89,9 +91,13 @@ def big_upset(data):
 
 
 equal_capital(data2018)
+equal_capital(data2014)
 
 equal_expectation(data2018)
+equal_expectation(data2014)
 
+strong_not_win(data2018)
 strong_not_win(data2014)
 
+big_upset(data2018)
 big_upset(data2014)
