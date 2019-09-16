@@ -1,10 +1,8 @@
-## Are-There-Many-Upsets-in-World-Cup-
+## Are-There-Many-Upsets-in-World-Cup
 
 Are there many upsets (weak team beats the strong one) happened in World Cup (2014 &amp; 2018). This article will analyze this question in quantificational way and statistical way. Besides, this essay wants to find if there is any good strategy to make profit in World Cup.
 
 I collected the data of each match in 2014 and 2018 World Cup and its odds of win, draw and lose.(2 matches's data in the group matches of 2014 is missing)  
-
-data source: [chick me](https://pan.baidu.com/s/19bk6PHHHFPd5wxNm0Nx4fQ)
 
 ### Statistical Analysis
 The three kinds of results each match are showed below. Statistically speaking, in 2014 and 2018 World Cup, the trends of the result are same. For all the matches, the upset accounts for 25% and in the final round the draw matches are much more than group matches'. 
