@@ -17,7 +17,7 @@ However, it is hard to tell the degree of the upset. Recently, we heard lots of 
 
 Assume that we are going to buy the lottery ticket of the soccer and we keep buying the same results: victory, draw or defeat. If the we can make more money in buying the 'weak team beats strong', we can say confidently that there are more upset matches.
 
-#### 1. Use the same capital(10000) in each matches
+1. Use the same capital(10000) in each matches
 In the photos, obviously we can see buying 'weak team beats strong team' performs well in 2018(actually the main gain is from Germang losed Mexico and Korea, poor German), hence 2018 world cup may have more upset matches.  
 Two interesting things are that keeping buying 'strong team win' could hardly make money, so do you always buy the hot team? Also, we can find in the finals round, there is few upset matches.
 
@@ -27,7 +27,7 @@ for 2018:
 for 2014:
 ![](https://ws3.sinaimg.cn/large/006tNc79gy1ftpe1q76ghj30vi0deq3o.jpg)
 
-#### 2. For the same expectation of each match
+2. For the same expectation of each match
 Considering another situation, when the match is risky to buy the weak team, which means the odds is really high, we may put less money, and that maybe safer. So we can keep the same expectation. In other words, when the odds rate is 5, we pay 4000 aim to try to get 20000 and when the odds rate is 2, we pay 10000 to try to get 20000. According to the result, 2018 world cup significantly had more upset matches. (Also, this strategy is not a suitable strategy.)
 
 for 2018:
@@ -36,7 +36,7 @@ for 2018:
 for 2014:
 ![](https://ws3.sinaimg.cn/large/006tNc79gy1ftpeq8df3uj30vi0dgt9f.jpg)
 
-#### 3. Buy draw and defeat to make a 'not win'
+3. Buy draw and defeat to make a 'not win'
 Based on former analysis, we find choosing 'strong teams win' could barely make profit, so what about the strong teams not win? In this case, we can buy this team victory and draw at the same time. But the result shows, it is not profitable at all. What a pity!
 
 for 2018:
@@ -45,7 +45,7 @@ for 2018:
 for 2014:
 ![](https://ws1.sinaimg.cn/large/006tNc79gy1ftpf3l44uej30w00e0wex.jpg)
 
-#### 4. Buy the big upset
+4. Buy the big upset
 What about only buying the big upset? For example, only when the odds rate larger than 6, we buy 'weak team wins'. Here is the result. Actually, it is not profitable either.
 
 for 2018:
