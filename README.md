@@ -61,6 +61,7 @@ for 2014:
 2. Keep buying hot team can not make profit.
 3. There is no sample profitable strategy in World Cup.
 4. If you still want to buy the lottery ticket, the strategy that in the group matches buying weak team and in the final mathces buying strong team seems to be a better choice.
+5. enjoy soccers, and keep away from gambling
 
 
 
