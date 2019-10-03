@@ -1,3 +1,5 @@
+- In front of the progam, enjoy soccers, and keep away from gambling.
+
 ## Are-There-Many-Upsets-in-World-Cup
 
 Are there many upsets (weak team beats the strong one) happened in World Cup (2014 &amp; 2018). This article will analyze this question in quantificational way and statistical way. Besides, this essay wants to find if there is any good strategy to make profit in World Cup.
